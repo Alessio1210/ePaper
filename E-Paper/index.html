@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    
+<div class="hero">
+    <div class="card">
+        <h1>Uploadet img</h1>
+        <p>dien bild</p>
+        <img src="img/img_placeholder.jpg" id="Upload-pic">
+        <label for="input-file">update image</label>
+        <input type="file" accept="image/jpeg, image/png, image/ jpg" id="input-file">
+    </div>
+</div>
+
+<script>
+    let Upload =document.getElementById("Upload-pic");
+    let InputFile =document.getElementById("input-file");
+
+    inputFile.onchange = function(){
+        Upload.scr = URL.createObjectURL(inputFile.files[0]);
+    }
+
+</script>
+
+
+</body>
+</html>
